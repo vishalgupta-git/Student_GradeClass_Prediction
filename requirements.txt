@@ -1,0 +1,13 @@
+numpy
+pandas
+scikit-learn
+ipykernel
+kaggle
+kagglehub[pandas-datasets]
+matplotlib
+seaborn
+scikit-learn
+streamlit
+joblib
+statsmodels
+torch
