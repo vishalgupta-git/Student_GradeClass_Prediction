@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Load your pre-trained RandomForest model
-model = joblib.load('rf_model.pkl')
+model = joblib.load('random_forest_model.joblib')
 
 st.set_page_config(page_title="Student GradeClass Predictor", layout="centered")
 
