@@ -2,8 +2,7 @@ import streamlit as st # type: ignore
 import pandas as pd
 import joblib
 
-# Load your pre-trained RandomForest model
-model = joblib.load('./models/random_forest_model.joblib')
+model = joblib.load('./models/rf_model.pkl')
 
 st.set_page_config(page_title="Student GradeClass Predictor", layout="centered")
 
@@ -86,13 +85,11 @@ with st.sidebar:
 
     gpa = st.slider("GPA", 2.0, 4.0, 3.0, step=0.01, help="Grade Point Average (scale 2.0 to 4.0)")
 
-# Convert boolean checkboxes to 0/1 for model input
 extracurricular = int(extracurricular)
 sports = int(sports)
 music = int(music)
 volunteering = int(volunteering)
 
-# Prepare input dataframe matching model's expected input
 input_df = pd.DataFrame({
     'Age': [age],
     'Gender': [gender],
