@@ -3,13 +3,13 @@ import pandas as pd
 import joblib
 
 # Load your pre-trained RandomForest model
-model = joblib.load('random_forest_model.joblib')
+model = joblib.load('./models/random_forest_model.joblib')
 
 st.set_page_config(page_title="Student GradeClass Predictor", layout="centered")
 
 st.title("🎓 Student Performance GradeClass Prediction")
 
-st.image("book.png", caption="Study Time Matters!", width=300)
+st.image("./img/book.png", caption="Study Time Matters!", width=300)
 
 with st.sidebar:
     st.header("Student Information")
